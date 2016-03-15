@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+::-moz-selection { background: rgba(0,0,0,0.2); }
+::selection { background: rgba(0,0,0,0.2); }
+
+body {
+	/* Fill the body with light dark blue*/
+	background: #07a;
+	background: -webkit-linear-gradient(left, #07a, #0aa, #07a);
+	background: -o-linear-gradient(right, #07a, #0aa, #07a);
+	background: -moz-linear-gradient(right, #07a, #0aa, #07a);
+	background: linear-gradient(to right, #07a, #0aa, #07a);
+	background-size: 100%;
+	background-position: 0%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1em;
+	margin: 4em;
+	color: #f5f5f5;
+	animation: bg-move 10s linear infinite;
+	-webkit-animation: bg-move 10s linear infinite;
+}
+
+h1 {
+	font-size: 3.5em;
+	text-align: center;
+	margin: -.1em, 0 1em;
+	margin-top: -20px;
+}
+
+p {
+	font-size:  1em;
+	text-align: center;
+	margin-top: -30px;
+}
+
+.circle {
+	position: relative;
+	margin: 0 auto 3em;
+	margin-top: 10px;
+	height: 9em;
+	width: 9em;
+	border-radius: 50%;
+	background: #999 
+	url(https://scontent-lga3-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/1546280_470253796411790_286987201_n.jpg?oh=03651ce0bfc39e9e499517932cb105ae&oe=574FF23F) 50% 0%;
+	background-size: 10em 10em;
+	box-shadow: 0 0 0 0.8em rgba(255,255,255,0.3);
+}
+
+.circle:before{
+  	position: relative;
+  	content: 'Software Developer';
+  	width: 8.25em;
+  	font-size: 1.7em;
+  	top: 2em;
+  	right: 6em;
+  	margin-left: -140px;
+}
+
+.circle:after {
+	position: absolute;
+  	content: 'DotA 2 Player';
+  	left: 7.25em;
+  	width: 8.25em;
+  	top: 2em;
+  	right: 6em;
+  	font-size: 1.7em;
+}
+
+a {
+	text-decoration: none;
+  	color: #fff;
+}
+
+a.button {
+	position: 0%;
+	display: inline-block;
+	font-size: 1.5rem;
+	color: #fff;
+	margin: 1em auto;
+	padding: 0.2em 0.85em;
+	border: solid 3px #fff;
+	border-radius: 0.15em;
+	background: linear-gradient(135deg, transparent 15%, rgba(255,255,255,0.3) 15%, transparent 30%);
+	background-size: 1000% 100%;
+	background-position: 0%;
+
+	box-shadow:rgba(0,0,0,1) 0 1px 0;
+	text-shadow:rgba(0,0,0,.4) 0 1px 0;
+}
+
+a.button:hover, a.button:focus {
+	color:#fff;
+	background-position: 0 0, 0 0;
+	-webkit-transition-duration:0.5s;
+	-moz-transition-duration:0.5s;
+	transition-duration: 0.5s;
+	animation: button-glare 5s linear infinite;
+	-webkit-animation: button-glare 5s linear infinite;
+}
+
+#footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	margin-left: -580px;
+	text-align: center;
+}
+
+#footer a {
+	position: relative;
+	margin-bottom: 50px;
+}
+
+@keyframes button-glare {to {background-position: 200%;}}
+@-webkit-keyframes button-glare {to {background-position: 200%;}}
