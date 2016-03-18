@@ -18,25 +18,27 @@ body {
 	color: #f5f5f5;
 	animation: bg-move 10s linear infinite;
 	-webkit-animation: bg-move 10s linear infinite;
+    position: relative;
 }
 
 h1 {
 	font-size: 3.5em;
 	text-align: center;
 	margin: -.1em, 0 1em;
-	margin-top: -20px;
+	margin-top: 20px;
 }
 
 p {
 	font-size:  1em;
 	text-align: center;
-	margin-top: -30px;
+	padding-top: 20px;
+	margin-top: -50px;
 }
 
 .circle {
 	position: relative;
 	margin: 0 auto 3em;
-	margin-top: 10px;
+	margin-top: 30px;
 	height: 9em;
 	width: 9em;
 	border-radius: 50%;
@@ -46,7 +48,11 @@ p {
 	box-shadow: 0 0 0 0.8em rgba(255,255,255,0.3);
 }
 
-.circle:before{
+.circle:hover {
+    
+}
+
+.circle:before {
   	position: relative;
   	content: 'Software Developer';
   	width: 8.25em;
@@ -83,12 +89,11 @@ a.button {
 	background: linear-gradient(135deg, transparent 15%, rgba(255,255,255,0.3) 15%, transparent 30%);
 	background-size: 1000% 100%;
 	background-position: 0%;
-
 	box-shadow:rgba(0,0,0,1) 0 1px 0;
 	text-shadow:rgba(0,0,0,.4) 0 1px 0;
 }
 
-a.button:hover, a.button:focus {
+a.button:hover {
 	color:#fff;
 	background-position: 0 0, 0 0;
 	-webkit-transition-duration:0.5s;
@@ -98,17 +103,65 @@ a.button:hover, a.button:focus {
 	-webkit-animation: button-glare 5s linear infinite;
 }
 
+.container {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
 #footer {
 	position: fixed;
 	width: 100%;
 	bottom: 0;
-	margin-left: -580px;
+	margin-left: -80px;
 	text-align: center;
 }
 
 #footer a {
 	position: relative;
 	margin-bottom: 50px;
+}
+
+
+#ballCanvasTop {
+	left:0%;
+	top:0%;
+    bottom: 60%;
+	position: absolute;
+}
+
+#ballCanvasBottom {
+	left: 20%;
+    padding-right: 30%;
+	top: 0;
+	position: absolute;
+}
+
+.ball {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+.top {
+	left:40%;
+	top:-110%;
+	transform: rotate(20deg);
+	transform-origin: 0 100%;
+}
+
+.bottom {
+	left: -20%;
+	top:100%;
+	transform: rotate(20deg);
+	transform-origin: 100% 0%;
+}
+
+hr {
+  width: 60%;
+  margin-right: 0 auto;
+  margin-left: 0 auto;
 }
 
 @keyframes button-glare {to {background-position: 200%;}}
